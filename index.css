@@ -7,10 +7,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
     margin: 0;
     padding: 20px;
-    overflow: hidden;
     position: relative;
 }
 
@@ -121,28 +119,28 @@ body {
 .chat-input-area {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 15px;
     border-top: 2px dashed #ffc0cb;
     background-color: #fff5fa;
     gap: 10px;
+    flex-wrap: wrap;
+    /* 👈 Wraps input + button on small screens */
 }
 
+/* Let input take available space */
 .chat-input-area input[type="text"] {
-    flex-grow: 1;
-    padding: 14px 20px;
-    border: 2px solid #ffd2e2;
-    border-radius: 30px;
-    background-color: #fff0f8;
-    font-size: 1rem;
-    outline: none;
-    transition: border-color 0.3s ease;
+    flex: 1 1 auto;
+    min-width: 0;
+    /* important for overflow handling */
 }
 
-.chat-input-area input[type="text"]:focus {
-    border-color: #ff69b4;
-}
-
+/* Responsive button styles */
 .chat-input-area button {
+    flex-shrink: 0;
+    /* 👈 Prevents button from shrinking */
+    max-width: 100%;
+    white-space: nowrap;
     background: linear-gradient(135deg, #ff69b4, #ff1493);
     color: white;
     padding: 13px 24px;
@@ -154,10 +152,33 @@ body {
     box-shadow: 0 5px 15px rgba(255, 105, 180, 0.5);
 }
 
-.chat-input-area button:hover {
-    transform: scale(1.05);
-    background: linear-gradient(135deg, #ff1493, #e60073);
+@media (max-width: 768px) {
+    .chat-input-area {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .chat-input-area input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 0.95rem;
+    }
+
+    .chat-input-area button {
+        width: 100%;
+        font-size: 1rem;
+        padding: 12px 16px;
+        text-align: center;
+    }
 }
+
+@media (max-width: 480px) {
+    .chat-input-area button {
+        font-size: 0.9rem;
+        padding: 10px 14px;
+    }
+}
+
 
 #emoji-button {
     font-size: 1.5rem;
