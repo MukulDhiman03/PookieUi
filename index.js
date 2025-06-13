@@ -30,7 +30,7 @@ async function handleSendMessage() {
   chatMessages.scrollTop = chatMessages.scrollHeight;
 
   try {
-    const res = await fetch("http://localhost:3000/chat", {
+    const res = await fetch("https://pookiebackend.onrender.com/chat", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
