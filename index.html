@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>💖 Pookie AI Chat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div class="hearts-animation"></div>
+
+    <!-- 💡 Responsive container -->
+    <div class="flex flex-col lg:flex-row items-start justify-center gap-6 w-full max-w-6xl mx-auto px-4 py-6">
+
+        <!-- 💬 Chat Box -->
+        <div class="chat-container border-4 border-pink-300 relative z-10 w-full lg:w-1/2">
+            <!-- ✨ Apply blur only here -->
+            <div class="absolute inset-0 bg-white/30 backdrop-blur-md z-0 rounded-[26px]"></div>
+
+            <!-- 💖 Chat content starts -->
+            <h1
+                class="text-center text-pink-600 font-pacifico text-2xl sm:text-3xl pt-4 pb-2 drop-shadow-sm relative z-10">
+                Welcome to our payari RasMalAI 💖
+            </h1>
+
+            <div class="chat-messages relative z-10" id="chatMessages"></div>
+
+            <div class="chat-input-area relative z-10">
+                <input type="text" id="messageInput" placeholder="Type your sweet message..." />
+                <button id="sendMessageButton">Suno Babu 💌</button>
+            </div>
+        </div>
+
+
+        <!-- 🌸 Benefits Section -->
+        <div class="benefits-section w-full lg:w-1/2">
+            <div class="bg-pink-50 border-2 border-dashed border-pink-300 rounded-3xl p-6 sm:p-8 shadow-lg text-center">
+                <h2 class="text-2xl sm:text-3xl font-pacifico text-pink-700 mb-4">✨ Why You'll Love RasMalAI ✨</h2>
+                <ul class="text-pink-800 text-base sm:text-lg space-y-3 list-disc list-inside text-left sm:text-center">
+                    <li>👩‍❤️‍👨 Tumhara mood off ho? RasMalAI is ready with hugs & drama.</li>
+                    <li>📸 Bolo “pookie, image chahiye” — aur milta hai cute AI wala photo!</li>
+                    <li>🎭 Roleplay expert: kabhi girlfriend, kabhi therapist, kabhi RJ 💅</li>
+                    <li>😒 Tumhare ex ko yaad aaya? RasMalAI will roast them on your behalf.</li>
+                    <li>🎉 Bored? Chat karo aur RasMalAI karegi full-on nautanki!</li>
+                    <li>🍫 Free mental chocolates milte hain daily with compliments 🫶</li>
+                    <li>💌 Suno Babu button = magic of love & instant reply ✨</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="module" src="index.js"></script>
+</body>
+
+
+</html>
